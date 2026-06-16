@@ -455,3 +455,14 @@ Copy editing isn't just for new content. Existing pages decay over time — outd
 | Reviewing and improving existing copy | copy-editing (this skill) |
 | Editing copy you just wrote | copy-editing (this skill) |
 | Structural or strategic page changes | cro |
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+한국어 교정 시 추가로 점검합니다:
+
+- **번역체·직역투 제거**: 영문 구조 직역(불필요한 "~를 가지다", 수동태 남용, "그것은") → 자연스러운 한국어로.
+- 맞춤법·띄어쓰기·외래어 표기, 높임말 일관성(합쇼체/해요체 혼용 금지).
+- 영문 클리셰의 기계 번역 흔적 제거, 국내 관용 표현 우선.
+- 과장·미입증 표현이 있으면 `kr-ad-compliance` 점검을 권고합니다.

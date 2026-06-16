@@ -406,3 +406,13 @@ For tracking setup, see [references/conversion-tracking.md](references/conversio
 - **analytics**: For proper conversion tracking setup
 - **ab-testing**: For landing page testing to improve ROAS
 - **cro**: For optimizing post-click conversion rates
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+한국 집행이면 국내 채널 구조로 분기합니다:
+
+- 검색 수요는 **네이버 검색광고(파워링크·쇼핑검색·브랜드검색)**, 수요창출·리타기팅은 **네이버 GFA·카카오모먼트·메타**.
+- 채널 선택·캠페인 구조·소재·예산의 국내 상세는 `kr-performance-ads` 참고. 로컬 비즈니스는 `danggn-local-ads`.
+- 모든 소재는 표시광고법·매체 심사 기준으로 `kr-ad-compliance` 사전 점검.

@@ -409,3 +409,13 @@ Tools: CapCut (free), Descript, Captions.ai, Premiere Pro
 - **launch**: For coordinating social with launches
 - **emails**: For nurturing social audience via email
 - **marketing-psychology**: For understanding what drives engagement
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+한국 타깃이면 플랫폼 세트를 조정합니다:
+
+- 핵심: 인스타그램·유튜브·**네이버 블로그**·카카오(채널/스토리)·스레드. 틱톡·X는 타깃에 따라 선택, LinkedIn은 일부 B2B 한정.
+- 네이버 블로그·검색 노출은 `naver-blog-seo`, 카카오 메시지는 `kakao-biz-message`.
+- 협찬·광고성 게시물은 **대가성 표시**(표시광고법) 의무 → `kr-ad-compliance`.

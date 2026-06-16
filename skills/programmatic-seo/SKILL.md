@@ -236,3 +236,11 @@ Watch for: Thin content warnings, Ranking drops, Manual actions, Crawl errors
 - **schema**: For adding structured data
 - **site-architecture**: For page hierarchy, URL structure, and internal linking
 - **competitors**: For comparison page frameworks
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+- pSEO 대량 페이지는 주로 **구글** 타깃에 유효합니다. **네이버는 대량·유사 생성 페이지에 보수적**(저품질·노출 제한 가능)이므로 네이버 노출은 기대하기 어렵습니다(추정, 정기 검증 필요).
+- 네이버 검색 자산은 원본성 높은 콘텐츠로 별도 접근합니다 → `naver-blog-seo`.
+- 페이지 카피의 과장·미입증 표현은 `kr-ad-compliance` 점검.

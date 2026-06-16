@@ -309,3 +309,14 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key email
 - **ab-testing**: For testing email elements
 - **popups**: For email capture popups
 - **revops**: For lifecycle stages that trigger email sequences
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+한국 타깃이면 채널·규제를 분기합니다:
+
+- **채널 선택**: 한국에서는 카카오 알림톡/친구톡이 이메일보다 도달·열람률이 높은 경우가 많습니다. 거래·안내성은 알림톡, 광고성은 친구톡으로 → `kakao-biz-message` 참고. 이메일은 뉴스레터·B2B·상세 콘텐츠에 활용합니다.
+- **정보통신망법(현재 기준 확인 필요)**: 광고성 이메일은 (1) 사전 수신 동의(옵트인), (2) 제목에 **'(광고)'** 표기, (3) 야간(21~08시) 발송 별도 동의, (4) 무료 수신거부 수단 안내가 필요합니다.
+- 거래성 메일(주문·배송·인증)과 광고성 메일을 분리하고, 광고성 문구를 거래메일에 섞지 않습니다.
+- 발송 전 `kr-ad-compliance` 로 표현·표기를 점검합니다.

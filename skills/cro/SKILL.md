@@ -185,3 +185,14 @@ When recommending experiments, consider tests for:
 ## Form Optimization
 
 For detailed form CRO guidance — including field optimization, multi-step forms, error handling, and form-specific experiments — see [references/form.md](references/form.md).
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+한국 페이지의 전환·신뢰 요소를 추가로 점검합니다:
+
+- **신뢰 요소**: 사업자등록번호, 통신판매업 신고번호, 대표자·주소·연락처(전자상거래법 표시), 안전결제(네이버페이/토스 등)를 노출합니다.
+- 후기·실사용 사진·KC인증 등 국내 사용자가 신뢰하는 요소를 배치합니다.
+- 모바일 비중이 높으므로 모바일 우선으로 검증합니다.
+- "최저가/1위" 등 표현은 실증 전제 → `kr-ad-compliance`.

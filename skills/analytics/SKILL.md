@@ -307,3 +307,11 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key analy
 - **seo-audit**: For organic traffic analysis
 - **cro**: For conversion optimization (uses this data)
 - **revops**: For pipeline metrics, CRM tracking, and revenue attribution
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+- GA4·GTM·Mixpanel 등 글로벌 스택은 한국에서도 표준입니다. **네이버 애널리틱스**·네이버 서치어드바이저를 병행하면 네이버 유입 분석에 유리합니다.
+- **개인정보보호법(PIPA, 현재 기준 확인 필요)**: 쿠키·식별자 기반 추적은 수집 항목·목적·보유기간 고지와 동의가 필요할 수 있습니다. 개인정보처리방침에 사용 중인 추적 도구를 명시합니다.
+- UTM·전환 추적은 매체(네이버/카카오) 태그와 일관되게 구성합니다.

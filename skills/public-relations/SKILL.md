@@ -129,3 +129,13 @@ Go to [press-platforms.md](references/press-platforms.md), use the response temp
 
 ### "Build my press page"
 Use the checklist above. Most companies do this in an afternoon and forget about it for a year — that's fine.
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+국내 PR 채널·관행을 반영합니다:
+
+- 배포: **뉴스와이어**(보도자료 배포), 스타트업·테크 매체(플래텀·아웃스탠딩·전자신문·바이라인 등), 분야 전문지.
+- 한국 보도자료 양식(제목·부제·리드·본문·문의처)과 격식 어조를 사용합니다. HARO 등 영어권 서비스는 국내 적용이 제한적입니다.
+- 사실·수치는 실증 전제, 과장 표현은 `kr-ad-compliance` 점검.

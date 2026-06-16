@@ -254,3 +254,13 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key prosp
 - **sales-enablement**: For battle cards and one-pagers used in the outreach
 - **directory-submissions**: For inbound discovery surfaces (the prospects might find you back)
 - **product-marketing**: For the ICP definition that anchors every prospecting engagement
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+국내 데이터 소스를 추가합니다:
+
+- 기업 정보: **DART(전자공시)**, 잡코리아·사람인(채용으로 성장·조직 추정), 네이버 플레이스·지도(로컬), 업종 협회·전시 디렉터리, 카탈로그/홈페이지.
+- 글로벌 소스(Apollo·ZoomInfo)는 국내 커버리지가 제한적일 수 있으므로 위 소스로 보완합니다.
+- 수집·활용 시 개인정보보호법(PIPA)을 준수하고, 콜드 아웃리치는 정보통신망법에 유의합니다(→ `cold-email`).
