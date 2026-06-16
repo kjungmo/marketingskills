@@ -107,6 +107,12 @@ Quick reference for AI agents to discover tool capabilities and integration meth
 | strapi | Headless CMS | ✓ | - | ✓ | ✓ | [strapi.md](integrations/strapi.md) |
 | composio | Integration Layer | ✓ | ✓ | ✓ | ✓ | [composio.md](integrations/composio.md) |
 | cogny | Integration Layer | - | ✓ | - | - | [cogny.md](integrations/cogny.md) |
+| naver-search-ad | Advertising (Korea) | ✓ | - | - | - | [naver-search-ad.md](integrations/naver-search-ad.md) |
+| kakao-moment | Advertising (Korea) | ✓ | - | - | - | [kakao-moment.md](integrations/kakao-moment.md) |
+| kakao-biz-message | Messaging (Korea) | ✓ | - | - | ✓ | [kakao-biz-message.md](integrations/kakao-biz-message.md) |
+| solapi | SMS/Messaging (Korea) | ✓ | - | - | ✓ | [solapi.md](integrations/solapi.md) |
+| naver-commerce | Commerce (Korea) | ✓ | - | - | - | [naver-commerce.md](integrations/naver-commerce.md) |
+| coupang-wing | Commerce (Korea) | ✓ | - | - | - | [coupang-wing.md](integrations/coupang-wing.md) |
 
 ---
 
@@ -228,7 +234,7 @@ Paid advertising platforms and campaign management.
 | **linkedin-ads** | B2B, job title targeting | - |
 | **tiktok-ads** | Younger demographics, video | - |
 
-**Agent recommendation**: Google Ads for search intent. Meta for demand generation. LinkedIn for B2B.
+**Agent recommendation**: Google Ads for search intent. Meta for demand generation. LinkedIn for B2B. **Korea**: 네이버 검색광고(naver-search-ad)·카카오모먼트(kakao-moment) — see the Korea section below.
 
 ### Automation
 
@@ -510,6 +516,21 @@ E-commerce platforms and content management systems.
 
 **Agent recommendation**: Shopify for e-commerce. Webflow for marketing sites. WordPress for blogs. For headless CMS: Sanity for developer-flexible content, Contentful for enterprise multi-locale, Strapi for self-hosted/budget-conscious. See [headless CMS guide](../skills/content-strategy/references/headless-cms.md) for selection criteria.
 
+### Korea (네이버 · 카카오 · 쿠팡)
+
+한국 시장 전용 채널 도구. 대부분 네이티브 MCP가 없어 직접 API로 연동합니다. 관련 실행 가이드는 `kr-performance-ads`, `kakao-biz-message`, `naver-smartstore-seo`, `coupang-listing`, `sms` skill 참고.
+
+| Tool | Best For | 연관 skill |
+|------|----------|-----------|
+| **naver-search-ad** | 네이버 검색 의도 수요(파워링크·쇼핑검색) | kr-performance-ads, ads |
+| **kakao-moment** | 카카오 도달·리타기팅(비즈보드·디스플레이) | kr-performance-ads, ads |
+| **kakao-biz-message** | 알림톡(거래)·친구톡(광고) 발송 | kakao-biz-message |
+| **solapi** | 문자(SMS/LMS/MMS)+알림톡 통합 발송 | sms, kakao-biz-message |
+| **naver-commerce** | 스마트스토어 상품·주문 관리 | naver-smartstore-seo |
+| **coupang-wing** | 쿠팡 상품·주문 관리(Open API) | coupang-listing |
+
+**Agent recommendation**: 검색 수요는 naver-search-ad, 도달·리타기팅은 kakao-moment. 메시지는 거래성 알림톡 vs 광고성 친구톡을 구분하고(정보통신망법), 문자까지 통합하려면 solapi. 커머스는 스마트스토어(naver-commerce)·쿠팡(coupang-wing). 모든 광고·메시지 카피는 표시광고법·정보통신망법 기준으로 `kr-ad-compliance` 사전 점검.
+
 ---
 
 ## CLI Tools
@@ -588,3 +609,17 @@ Use Cogny when you only need marketing channels and want to avoid running your o
 ### Running paid ads
 1. Read [google-ads.md](integrations/google-ads.md) for search campaigns
 2. Read [meta-ads.md](integrations/meta-ads.md) for social campaigns
+
+### Running ads in Korea (네이버 · 카카오)
+1. Read [naver-search-ad.md](integrations/naver-search-ad.md) for 네이버 검색광고
+2. Read [kakao-moment.md](integrations/kakao-moment.md) for 카카오 도달·리타기팅
+3. Check copy against [kr-ad-compliance](../skills/kr-ad-compliance/) (표시광고법·정보통신망법)
+
+### Sending Korean messaging (알림톡 · 친구톡 · 문자)
+1. Read [kakao-biz-message.md](integrations/kakao-biz-message.md) for 알림톡(거래)/친구톡(광고)
+2. Read [solapi.md](integrations/solapi.md) to add SMS/LMS/MMS in one API
+3. Apply opt-in / (광고) / 야간전송 rules from [kakao-biz-message](../skills/kakao-biz-message/)
+
+### Selling on Korean marketplaces (스마트스토어 · 쿠팡)
+1. Read [naver-commerce.md](integrations/naver-commerce.md) + optimize with [naver-smartstore-seo](../skills/naver-smartstore-seo/)
+2. Read [coupang-wing.md](integrations/coupang-wing.md) + optimize with [coupang-listing](../skills/coupang-listing/)
