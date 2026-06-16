@@ -58,6 +58,11 @@ metadata:
 - **예산·입찰 배분안**
 - **측정·KPI 셋업 권고**
 
+## 연관 도구
+
+- 네이버 검색광고 API: `tools/integrations/naver-search-ad.md`
+- 카카오모먼트 API: `tools/integrations/kakao-moment.md`
+
 ## 연관 skill
 
 ads · ad-creative · kr-ad-compliance · analytics · danggn-local-ads

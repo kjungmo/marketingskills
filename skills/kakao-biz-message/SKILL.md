@@ -71,6 +71,11 @@ metadata:
 - 알림톡/친구톡 템플릿 갤러리(변수·버튼 포함): `references/templates.md`
 - 정보통신망법 체크리스트·(광고)/수신거부/옵트인 문구: `references/compliance-templates.md`
 
+## 연관 도구
+
+- 카카오 비즈메시지 발송(대행사 API): `tools/integrations/kakao-biz-message.md`
+- 문자+알림톡 통합 발송(SOLAPI): `tools/integrations/solapi.md`
+
 ## 연관 skill
 
 emails · sms · kr-ad-compliance · copywriting · churn-prevention

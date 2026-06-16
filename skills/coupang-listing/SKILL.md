@@ -51,6 +51,10 @@ metadata:
 - **리뷰·랭킹 개선 액션**
 - **규제 표기 체크리스트**
 
+## 연관 도구
+
+- 쿠팡 Open API(Wing): `tools/integrations/coupang-wing.md`
+
 ## 연관 skill
 
 naver-smartstore-seo · copywriting · cro · kr-ad-compliance · kr-performance-ads

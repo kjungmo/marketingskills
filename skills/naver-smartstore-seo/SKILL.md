@@ -56,6 +56,10 @@ metadata:
 
 - 상품명 공식·카테고리·태그·금지표현·상세페이지 템플릿: `references/listing-optimization.md`
 
+## 연관 도구
+
+- 네이버 커머스 API(상품·주문): `tools/integrations/naver-commerce.md`
+
 ## 연관 skill
 
 copywriting · cro · kr-ad-compliance · coupang-listing · naver-blog-seo
