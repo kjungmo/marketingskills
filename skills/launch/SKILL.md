@@ -351,3 +351,13 @@ Even small changelog updates remind customers your product is evolving. This bui
 - **marketing-psychology**: For psychology behind waitlists and exclusivity
 - **programmatic-seo**: For comparison pages mentioned in post-launch
 - **sales-enablement**: For launch sales collateral and enablement materials
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+국내 런치 채널을 병행합니다:
+
+- **디스콰이엇**(국내 메이커 커뮤니티), 네이버 카페·카카오 오픈채팅, 분야 뉴스레터, 보도자료(→ `public-relations`).
+- 카카오 채널 친구·알림톡으로 런치 알림(`kakao-biz-message`), 네이버 블로그 콘텐츠(`naver-blog-seo`)로 검색 자산화.
+- 런치 카피·혜택 표현은 `kr-ad-compliance` 점검.

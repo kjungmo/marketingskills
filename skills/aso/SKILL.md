@@ -310,3 +310,11 @@ the app's brand maturity tier — they may be deliberate choices for Dominant ap
 - **ad-creative**: For creating App Store and Google Play ad creatives
 - **analytics**: For setting up install attribution and in-app event tracking
 - **customer-research**: For understanding user needs and language to inform listing copy
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+- App Store·Google Play 외에 한국은 **원스토어(ONE store)** 도 고려 대상입니다.
+- 한국어 키워드 최적화: 검색 의도에 맞는 한국어 키워드·동의어·외래어 표기 변형을 반영하고 직역 키워드를 지양합니다.
+- 스크린샷·설명 카피의 과장·미입증 표현은 `kr-ad-compliance` 로 점검합니다.

@@ -379,3 +379,11 @@ Keep the plan actionable. Every item should be something the user can do today.
 - **free-tools** — lead magnets for destination pages
 - **community-marketing** — Reddit, Indie Hackers, Slack community mechanics
 - **schema** — FAQ + Product + Organization JSON-LD for GEO
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+- 글로벌 디렉터리(Product Hunt·G2 등)에 더해 국내 채널을 고려합니다: **디스콰이엇(disquiet)**, 아웃스탠딩·플래텀(미디어 소개), 분야별 큐레이션·뉴스레터.
+- 백링크·도메인 평판은 구글 기준이며, 네이버 노출은 별도입니다(→ `naver-blog-seo`).
+- 소개문의 과장 표현은 `kr-ad-compliance` 점검.

@@ -336,3 +336,14 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key SMS t
 - **analytics**: For attribution and RPS measurement.
 - **ab-testing**: For SMS-specific test design.
 - **lead-magnets**: For incentivizing opt-in (the "10% off for joining" offer).
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+한국 SMS는 미국 규제(A2P 10DLC/TCPA)가 아니라 **국내 규제·채널**을 따릅니다:
+
+- **유형**: SMS(단문)·LMS(장문)·MMS(이미지). 광고성은 **카카오 알림톡/친구톡**이 대안·보완 → `kakao-biz-message`.
+- **정보통신망법(현재 기준 확인 필요)**: 광고성 문자는 (1) 사전 수신 동의, (2) 본문 처음에 **'(광고)'**, (3) 야간(21~08시) 별도 동의, (4) **무료 수신거부(080 등)** 번호·방법 안내, (5) 전송자 명시가 필요합니다.
+- 발신번호 사전 등록 등 발송 인프라 요건을 확인합니다.
+- 발송 전 `kr-ad-compliance` 점검.

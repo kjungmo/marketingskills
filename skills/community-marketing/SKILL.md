@@ -161,3 +161,11 @@ Always be specific. Generic advice ("be consistent," "provide value") is not use
 - **churn-prevention**: For retention strategies that complement community engagement
 - **social**: For content creation across social platforms
 - **customer-research**: For understanding your community members' needs and language
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+- 한국 커뮤니티는 Discord/Slack 외에 **네이버 카페**, **카카오톡 오픈채팅**, 분야별 커뮤니티(클리앙·디시 등)가 핵심입니다.
+- 네이버 카페는 검색 노출·축적형, 오픈채팅은 실시간 소통·단골화에 유리합니다.
+- 광고성 게시·대가성 후기는 표시광고법·플랫폼 정책을 준수합니다 → `kr-ad-compliance`.

@@ -1,0 +1,42 @@
+{
+  "skill_name": "danggn-local-ads",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "동네 미용실인데 당근에 광고를 하고 싶어요.",
+      "expected_output": "product-marketing.md를 확인하고 매장 중심 반경 타깃·노출 시간대를 권고해야 한다. 비즈프로필 정비, 실사 사진 가이드와 동네 친화 카피, 첫 방문 오퍼·단골 전환 플랜을 제시하고 표현은 kr-ad-compliance로 점검한다.",
+      "assertions": [
+        "product-marketing.md 확인",
+        "반경 타깃·시간대 권고",
+        "비즈프로필 정비",
+        "사진 가이드+카피",
+        "첫 방문 오퍼·단골 전환",
+        "kr-ad-compliance 연계"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "당근 광고 소재를 만들어주세요.",
+      "expected_output": "실제 매장·결과물 실사 사진 가이드와 동네·혜택·기간을 담은 1~2줄 카피 후보를 제시해야 한다. 과장·미입증 표현을 피하고 kr-ad-compliance 점검을 연계한다.",
+      "assertions": [
+        "실사 사진 가이드",
+        "동네·혜택·기간 카피 후보",
+        "과장 표현 회피",
+        "kr-ad-compliance 연계"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "첫 방문 손님을 단골로 만들고 싶어요.",
+      "expected_output": "첫 방문 쿠폰 → 재방문 유도 → 소식 구독으로 이어지는 단골(LTV) 전환 플랜을 제시해야 한다. 비즈프로필·후기 신뢰 형성을 함께 권고한다.",
+      "assertions": [
+        "첫 방문→재방문→구독 단골 플랜",
+        "LTV 관점",
+        "후기·신뢰 형성 권고"
+      ],
+      "files": []
+    }
+  ]
+}

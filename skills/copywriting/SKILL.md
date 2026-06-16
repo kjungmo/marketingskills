@@ -250,3 +250,15 @@ For headlines and CTAs, provide 2-3 options:
 - **emails**: For email copywriting
 - **popups**: For popup and modal copy
 - **ab-testing**: To test copy variations
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+`.agents/product-marketing.md` 의 톤 & 카피 가이드를 따릅니다. 한국어 카피 작성 시:
+
+- 타깃 어조(합쇼체/해요체/반말)를 일관되게 유지합니다. product-marketing.md에 명시된 어조를 우선합니다.
+- **영어 직역투·번역체 금지**: "당신의 비즈니스를 성장시키세요" 류의 어색한 직역 대신 국내 관용 표현을 씁니다.
+- 영문 마케팅 클리셰(Unlock/Supercharge/Effortless)의 기계적 번역을 회피합니다.
+- 외래어·전문용어는 타깃 이해 수준에 맞춰 한국어 표현을 병기합니다.
+- 과장·미입증·절대적 표현은 `kr-ad-compliance` 로 점검합니다.

@@ -1,316 +1,154 @@
-# Marketing Skills for AI Agents
+# 한국 마케팅 Skills (Marketing Skills KR)
 
-A collection of AI agent skills focused on marketing tasks. Built for technical marketers and founders who want AI coding agents to help with conversion optimization, copywriting, SEO, analytics, and growth engineering. Works with Claude Code, OpenAI Codex, Cursor, Windsurf, and any agent that supports the [Agent Skills spec](https://agentskills.io).
+한국 시장에 바로 쓸 수 있는 마케팅 **AI Agent Skills** 모음입니다. 네이버·카카오·쿠팡·당근 등 국내 채널과 표시광고법·정보통신망법·개인정보보호법 등 국내 규제를 반영했습니다. Claude Code, OpenAI Codex, Cursor, Windsurf 등 [Agent Skills 스펙](https://agentskills.io)을 지원하는 모든 에이전트에서 동작합니다.
 
-Built by [Corey Haines](https://corey.co?ref=marketingskills). Need hands-on help? Check out [Conversion Factory](https://conversionfactory.co?ref=marketingskills) — Corey's agency for conversion optimization, landing pages, and growth strategy. Want to learn more about marketing? Subscribe to [Swipe Files](https://swipefiles.com?ref=marketingskills). Want to get dangerously good at using AI for marketing? Check out [AI Marketing Training](https://conversionfactory.co/offers/ai-marketing-training?ref=marketingskills). Want an autonomous AI agent that uses these skills to be your CMO? Try [Magister](https://magistermarketing.com?ref=marketingskills).
+> **Fork 출처**: 본 저장소는 [Corey Haines](https://corey.co)의 [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) (MIT 라이선스)를 fork 하여 한국 시장용으로 재구성한 것입니다. 원저작권 표기는 [LICENSE](LICENSE)에 그대로 유지됩니다.
 
-New to the terminal and coding agents? Check out the companion guide [Coding for Marketers](https://codingformarketers.com?ref=marketingskills).
+## 핵심 전략 — 컨텍스트 한 곳에 한국을 주입
 
-**Contributions welcome!** Found a way to improve a skill or have a new one to add? [Open a PR](#contributing).
+모든 skill은 가장 먼저 `.agents/product-marketing.md` 컨텍스트 파일을 읽습니다. 이 파일에 **한국 시장·검색 환경·국내 규제·톤**을 주입해 두면, 나머지 글로벌 skill 다수가 별도 수정 없이 **자동으로 한국 맥락**을 따릅니다.
 
-Run into a problem or have a question? [Open an issue](https://github.com/coreyhaines31/marketingskills/issues) — we're happy to help.
+- `product-marketing` skill로 컨텍스트를 한 번 만들면(`시장 컨텍스트`·`규제 가드레일`·`톤 & 카피 가이드` 포함), SEO·카피·이메일·광고·가격 등 다른 skill이 이를 상속합니다.
+- 국내 전용 채널(네이버·카카오·쿠팡·당근)은 별도 신규 skill로 제공합니다.
 
-## What are Skills?
+> ⚠️ **규제·검색 로직 면책**: 표시광고법·정보통신망법·개인정보보호법 등 **법령은 개정될 수 있으므로** 실제 캠페인 집행 전 최신 법령을 재검증하십시오. 네이버 C-Rank·D.I.A.+ 등 검색 로직은 **공식 미공개·수시 변동**이므로 본 저장소의 설명은 추정 기반이며 정기 검증이 필요합니다. 의료·건강기능식품·금융 등은 업종별 추가 규제를 별도 확인하십시오. 본 저장소는 법률 자문이 아닙니다.
 
-Skills are markdown files that give AI agents specialized knowledge and workflows for specific tasks. When you add these to your project, your agent can recognize when you're working on a marketing task and apply the right frameworks and best practices.
+## 한국화 분류 (REUSE / ADAPT / NEW)
 
-## How Skills Work Together
+전체 51개 skill을 세 갈래로 재구성했습니다. 상세 분류 근거는 [LOCALIZATION_PLAN.md](LOCALIZATION_PLAN.md)를 참고하세요.
 
-Skills reference each other and build on shared context. The `product-marketing` skill is the foundation — every other skill checks it first to understand your product, audience, and positioning before doing anything.
+### 🆕 NEW — 국내 전용 신규 skill (7종)
 
-```
-                            ┌──────────────────────────────────────┐
-                            │          product-marketing           │
-                            │    (read by all other skills first)  │
-                            └──────────────────┬───────────────────┘
-                                               │
-    ┌──────────────┬─────────────┬─────────────┼─────────────┬──────────────┬──────────────┐
-    ▼              ▼             ▼             ▼             ▼              ▼              ▼
-┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────────┐ ┌──────────┐ ┌─────────────┐ ┌───────────┐
-│  SEO &   │ │   CRO    │ │Content & │ │  Paid &    │ │ Growth & │ │  Sales &    │ │ Strategy  │
-│ Content  │ │          │ │   Copy   │ │Measurement │ │Retention │ │    GTM      │ │           │
-├──────────┤ ├──────────┤ ├──────────┤ ├────────────┤ ├──────────┤ ├─────────────┤ ├───────────┤
-│seo-audit │ │cro       │ │copywritng│ │ads         │ │referrals │ │revops       │ │mktg-ideas │
-│ai-seo    │ │signup    │ │copy-edit │ │ad-creative │ │free-tools│ │sales-enable │ │mktg-psych │
-│site-arch │ │onboarding│ │cold-email│ │ab-testing  │ │churn-    │ │launch       │ │customer-  │
-│programm  │ │popups    │ │emails    │ │analytics   │ │ prevent  │ │pricing      │ │ research  │
-│schema    │ │paywalls  │ │social    │ │            │ │community │ │competitors  │ │           │
-│content   │ │          │ │video     │ │            │ │lead-magnt│ │comp-profile │ │           │
-│aso       │ │          │ │image     │ │            │ │co-mktg   │ │directory    │ │           │
-│          │ │          │ │sms       │ │            │ │          │ │prospecting  │ │           │
-└────┬─────┘ └────┬─────┘ └────┬─────┘ └─────┬──────┘ └────┬─────┘ └──────┬──────┘ └─────┬─────┘
-     │            │            │              │             │              │              │
-     └────────────┴─────┬──────┴──────────────┴─────────────┴──────────────┴──────────────┘
-                        │
-         Skills cross-reference each other:
-           copywriting ↔ cro ↔ ab-testing
-           revops ↔ sales-enablement ↔ cold-email
-           seo-audit ↔ schema ↔ ai-seo
-           customer-research → copywriting, cro, competitors
-```
-
-See each skill's **Related Skills** section for the full dependency map.
-
-## Available Skills
-
-<!-- SKILLS:START -->
-| Skill | Description |
+| Skill | 다루는 범위 |
 |-------|-------------|
-| [ab-testing](skills/ab-testing/) | When the user wants to plan, design, or implement an A/B test or experiment, or build a growth experimentation program.... |
-| [ad-creative](skills/ad-creative/) | When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad... |
-| [ads](skills/ads/) | When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X,... |
-| [ai-seo](skills/ai-seo/) | When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers.... |
-| [analytics](skills/analytics/) | When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions... |
-| [aso](skills/aso/) | When the user wants to audit or optimize an App Store or Google Play listing. Also use when the user mentions 'ASO... |
-| [churn-prevention](skills/churn-prevention/) | When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or... |
-| [co-marketing](skills/co-marketing/) | When the user wants to find co-marketing partners, plan joint campaigns, or brainstorm partnership opportunities. Use... |
-| [cold-email](skills/cold-email/) | Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails,... |
-| [community-marketing](skills/community-marketing/) | Build and leverage online communities to drive product growth and brand loyalty. Use when the user wants to create a... |
-| [competitor-profiling](skills/competitor-profiling/) | When the user wants to research, profile, or analyze competitors from their URLs. Also use when the user mentions... |
-| [competitors](skills/competitors/) | When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when... |
-| [content-strategy](skills/content-strategy/) | When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also... |
-| [copy-editing](skills/copy-editing/) | When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the... |
-| [copywriting](skills/copywriting/) | When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages,... |
-| [cro](skills/cro/) | When the user wants to optimize, improve, or increase conversions on any marketing page or form — including homepage,... |
-| [customer-research](skills/customer-research/) | When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer... |
-| [directory-submissions](skills/directory-submissions/) | When the user wants to submit their product to startup, SaaS, AI, agent, MCP, no-code, or review directories for... |
-| [emails](skills/emails/) | When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email... |
-| [free-tools](skills/free-tools/) | When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or... |
-| [image](skills/image/) | When the user wants to create, generate, edit, or optimize images for marketing — blog heroes, social graphics, product... |
-| [launch](skills/launch/) | When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user... |
-| [lead-magnets](skills/lead-magnets/) | When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the... |
-| [marketing-ideas](skills/marketing-ideas/) | When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the... |
-| [marketing-plan](skills/marketing-plan/) | When the user needs a comprehensive marketing plan for a client, a company they advise, or their own product. Also use... |
-| [marketing-psychology](skills/marketing-psychology/) | When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when... |
-| [onboarding](skills/onboarding/) | When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also... |
-| [paywalls](skills/paywalls/) | When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use... |
-| [popups](skills/popups/) | When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also... |
-| [pricing](skills/pricing/) | When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions... |
-| [product-marketing](skills/product-marketing/) | When the user wants to create or update their product marketing context document. Also use when the user mentions... |
-| [programmatic-seo](skills/programmatic-seo/) | When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions... |
-| [prospecting](skills/prospecting/) | When the user wants to find, qualify, and build a list of prospects to reach out to — across B2B SaaS, general B2B, or... |
-| [public-relations](skills/public-relations/) | When the user wants help with public relations, earned media, press coverage, journalist outreach, or media strategy... |
-| [referrals](skills/referrals/) | When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy.... |
-| [revops](skills/revops/) | When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes.... |
-| [sales-enablement](skills/sales-enablement/) | When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also... |
-| [schema](skills/schema/) | When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user... |
-| [seo-audit](skills/seo-audit/) | When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions "SEO... |
-| [signup](skills/signup/) | When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the... |
-| [site-architecture](skills/site-architecture/) | When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal... |
-| [sms](skills/sms/) | When the user wants to plan, build, or optimize SMS or MMS marketing — including welcome flows, abandoned cart texts,... |
-| [social](skills/social/) | When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram,... |
-| [video](skills/video/) | When the user wants to create, generate, or produce video content using AI tools or programmatic frameworks. Also use... |
-<!-- SKILLS:END -->
+| [naver-blog-seo](skills/naver-blog-seo/) | 네이버 블로그·검색 상위노출(C-Rank·D.I.A.+ 추정 대응), 키워드 배치, 체류시간·저품질 회피 |
+| [naver-smartstore-seo](skills/naver-smartstore-seo/) | 스마트스토어 상품명·태그·상세페이지, 네이버 쇼핑 노출 |
+| [kakao-biz-message](skills/kakao-biz-message/) | 카카오 알림톡/친구톡 설계, 채널 친구 확보, 정보통신망법 옵트인 준수 |
+| [coupang-listing](skills/coupang-listing/) | 쿠팡 상품명·검색태그·로켓배송 노출, 리뷰·랭킹 최적화 |
+| [kr-performance-ads](skills/kr-performance-ads/) | 네이버 GFA/검색광고·카카오모먼트·메타 한국 집행, 소재·타깃·예산 구조 |
+| [kr-ad-compliance](skills/kr-ad-compliance/) | 표시광고법·정보통신망법·PIPA 카피 사전 점검 체커 (다른 skill이 호출) |
+| [danggn-local-ads](skills/danggn-local-ads/) | 당근 지역 광고 등 로컬 비즈니스 |
 
-## Installation
+### 🔧 ADAPT — 한국 채널·톤·규제 보정 skill (23종)
 
-### Option 1: CLI Install (Recommended)
+각 skill 본문에 `## 한국 시장 보정 (Korea)` 섹션을 추가해 국내 채널 분기·규제·표기를 반영했습니다(원본은 유지).
 
-Use [npx skills](https://github.com/vercel-labs/skills) to install skills directly:
+| Skill | 한국 보정 포인트 |
+|-------|------------------|
+| [product-marketing](skills/product-marketing/) | **컨텍스트 허브** — 시장·규제·톤 가이드 주입 |
+| [seo-audit](skills/seo-audit/) | 구글 + 네이버 이원 점검 (`references/naver-seo.md`) |
+| [copywriting](skills/copywriting/) | 한국어 톤(합쇼체/해요체), 영어 직역투 금지 |
+| [emails](skills/emails/) | 카카오 알림톡/친구톡 분기 + 정보통신망법 |
+| [pricing](skills/pricing/) | 원화·부가세·네이버페이/카카오페이/토스 |
+| [ads](skills/ads/) | 네이버 GFA·검색광고, 카카오모먼트 분기 |
+| [ad-creative](skills/ad-creative/) | 네이버/카카오 소재 규격, 한국어 카피 톤 |
+| [copy-editing](skills/copy-editing/) | 한국어 교정·번역체 제거 |
+| [sms](skills/sms/) | SMS/LMS/MMS + 카카오 + 정보통신망법((광고)·080) |
+| [cold-email](skills/cold-email/) | 국내 B2B 톤 + 정보통신망법 유의 |
+| [cro](skills/cro/) | 국내 신뢰 요소(사업자번호·통신판매신고)·전자상거래법 |
+| [social](skills/social/) | 국내 플랫폼 세트(인스타·유튜브·네이버·카카오) |
+| [analytics](skills/analytics/) | 네이버 애널리틱스 + PIPA 추적 동의 |
+| [aso](skills/aso/) | 원스토어(ONE store) + 한국어 키워드 |
+| [community-marketing](skills/community-marketing/) | 네이버 카페·카카오 오픈채팅 |
+| [customer-research](skills/customer-research/) | 국내 VOC 소스(카페·지식iN·블라인드) |
+| [directory-submissions](skills/directory-submissions/) | 국내 디렉터리(디스콰이엇 등) |
+| [launch](skills/launch/) | 국내 런치 채널(디스콰이엇·카페·오픈채팅) |
+| [popups](skills/popups/) | 수집 동의(PIPA·옵트인) 체크박스 분리 |
+| [programmatic-seo](skills/programmatic-seo/) | 네이버 저품질 회피·구글 타깃 주석 |
+| [prospecting](skills/prospecting/) | 국내 데이터 소스(DART·잡코리아·사람인) |
+| [public-relations](skills/public-relations/) | 국내 매체·보도자료(뉴스와이어·플래텀) |
+| [signup](skills/signup/) | 카카오/네이버 로그인·본인인증·만14세 동의 |
+
+### ♻️ REUSE — 수정 없이 사용 (21종)
+
+보편 원리 중심으로, `product-marketing.md` 컨텍스트만으로 한국 톤·맥락을 자동 상속합니다.
+
+| Skill | 범위 | Skill | 범위 |
+|-------|------|-------|------|
+| [ab-testing](skills/ab-testing/) | A/B 테스트·실험 설계 | [marketing-psychology](skills/marketing-psychology/) | 행동과학·설득 원리 |
+| [ai-seo](skills/ai-seo/) | AI 검색(AEO/GEO/LLMO) | [churn-prevention](skills/churn-prevention/) | 이탈 방지·결제 복구 |
+| [co-marketing](skills/co-marketing/) | 공동마케팅·협업 | [competitor-profiling](skills/competitor-profiling/) | 경쟁사 리서치 |
+| [competitors](skills/competitors/) | 비교/대안 페이지 | [content-strategy](skills/content-strategy/) | 콘텐츠 전략·토픽 클러스터 |
+| [free-tools](skills/free-tools/) | 무료 툴 기획 | [image](skills/image/) | 마케팅 이미지 생성 |
+| [lead-magnets](skills/lead-magnets/) | 리드 마그넷 | [marketing-ideas](skills/marketing-ideas/) | 마케팅 아이디어 |
+| [marketing-plan](skills/marketing-plan/) | AARRR 종합 플랜 | [onboarding](skills/onboarding/) | 온보딩·활성화 |
+| [paywalls](skills/paywalls/) | 인앱 업그레이드 | [referrals](skills/referrals/) | 추천·제휴 프로그램 |
+| [revops](skills/revops/) | 레브옵스·파이프라인 | [sales-enablement](skills/sales-enablement/) | 세일즈 콜래터럴 |
+| [schema](skills/schema/) | 구조화 데이터(구글) | [site-architecture](skills/site-architecture/) | 사이트 IA·내비게이션 |
+| [video](skills/video/) | AI 영상 제작 | | |
+
+## 설치
+
+### 방법 1: CLI 설치 (권장)
+
+[npx skills](https://github.com/vercel-labs/skills)로 직접 설치합니다.
 
 ```bash
-# Install all skills
-npx skills add coreyhaines31/marketingskills
+# 전체 skill 설치
+npx skills add kjungmo/marketingskills
 
-# Install specific skills
-npx skills add coreyhaines31/marketingskills --skill cro copywriting
+# 특정 skill만 설치
+npx skills add kjungmo/marketingskills --skill naver-blog-seo kakao-biz-message
 
-# List available skills
-npx skills add coreyhaines31/marketingskills --list
+# 목록 보기
+npx skills add kjungmo/marketingskills --list
 ```
 
-This automatically installs to your `.agents/skills/` directory (and symlinks into `.claude/skills/` for Claude Code compatibility).
+`.agents/skills/` 디렉터리에 설치되며 Claude Code 호환을 위해 `.claude/skills/`로 심볼릭 링크됩니다.
 
-### Option 2: Claude Code Plugin
-
-Install via Claude Code's built-in plugin system:
+### 방법 2: Claude Code 플러그인
 
 ```bash
-# Add the marketplace
-/plugin marketplace add coreyhaines31/marketingskills
+# 마켓플레이스 추가
+/plugin marketplace add kjungmo/marketingskills
 
-# Install all marketing skills
-/plugin install marketing-skills
+# 전체 skill 설치
+/plugin install marketing-skills-kr
 ```
 
-### Option 3: Clone and Copy
-
-Clone the entire repo and copy the skills folder:
+### 방법 3: 클론 후 복사
 
 ```bash
-git clone https://github.com/coreyhaines31/marketingskills.git
+git clone https://github.com/kjungmo/marketingskills.git
 cp -r marketingskills/skills/* .agents/skills/
 ```
 
-### Option 4: Git Submodule
+## 사용법
 
-Add as a submodule for easy updates:
-
-```bash
-git submodule add https://github.com/coreyhaines31/marketingskills.git .agents/marketingskills
-```
-
-Then reference skills from `.agents/marketingskills/skills/`.
-
-### Option 5: Fork and Customize
-
-1. Fork this repository
-2. Customize skills for your specific needs
-3. Clone your fork into your projects
-
-### Option 6: SkillKit (Multi-Agent)
-
-Use [SkillKit](https://github.com/rohitg00/skillkit) to install skills across multiple AI agents (Claude Code, Cursor, Copilot, etc.):
-
-```bash
-# Install all skills
-npx skillkit install coreyhaines31/marketingskills
-
-# Install specific skills
-npx skillkit install coreyhaines31/marketingskills --skill cro copywriting
-
-# List available skills
-npx skillkit install coreyhaines31/marketingskills --list
-```
-
-## Upgrading from v1.x to v2.0
-
-v2.0 renames 17 skills and consolidates `page-cro` + `form-cro` into a single `cro` skill. If you installed the v1.x skills, you'll have **stale old-name folders** in your install directory after upgrading — the new skills install alongside the old ones, so you'll see both `skills/page-cro/` and `skills/cro/`, etc. Clean them up:
-
-```bash
-# From the directory where you installed the skills (e.g., .agents/skills/ or .claude/skills/)
-rm -rf page-cro form-cro \
-       ab-test-setup analytics-tracking aso-audit competitor-alternatives \
-       email-sequence free-tool-strategy launch-strategy onboarding-cro \
-       paid-ads paywall-upgrade-cro popup-cro pricing-strategy \
-       product-marketing-context referral-program schema-markup \
-       signup-flow-cro social-content
-```
-
-Then reinstall the v2.0 skills via your usual method (e.g., `npx skills add coreyhaines31/marketingskills`).
-
-### Migrate the product marketing context file
-
-In v2.0 the context file moved from `.claude/` to `.agents/` and was renamed from `product-marketing-context.md` to `product-marketing.md`. Move your existing context file:
-
-```bash
-mkdir -p .agents
-# v2.0 file (or pre-v2.0 file with new name)
-mv .claude/product-marketing.md .agents/product-marketing.md 2>/dev/null
-# pre-v2.0 file with legacy name
-mv .claude/product-marketing-context.md .agents/product-marketing.md 2>/dev/null
-```
-
-Skills will still check `.claude/` and the legacy `product-marketing-context.md` filename as fallbacks, so nothing breaks if you don't migrate.
-
-### Full rename map
-
-| Old | New |
-|-----|-----|
-| `ab-test-setup` | `ab-testing` |
-| `analytics-tracking` | `analytics` |
-| `aso-audit` | `aso` |
-| `competitor-alternatives` | `competitors` |
-| `email-sequence` | `emails` |
-| `form-cro` | merged into `cro` |
-| `free-tool-strategy` | `free-tools` |
-| `launch-strategy` | `launch` |
-| `onboarding-cro` | `onboarding` |
-| `page-cro` | `cro` |
-| `paid-ads` | `ads` |
-| `paywall-upgrade-cro` | `paywalls` |
-| `popup-cro` | `popups` |
-| `pricing-strategy` | `pricing` |
-| `product-marketing-context` | `product-marketing` |
-| `referral-program` | `referrals` |
-| `schema-markup` | `schema` |
-| `signup-flow-cro` | `signup` |
-| `social-content` | `social` |
-
-## Usage
-
-Once installed, just ask your agent to help with marketing tasks:
+먼저 제품 컨텍스트를 만들어 한국 시장 기본값을 잡습니다.
 
 ```
-"Help me optimize this landing page for conversions"
-→ Uses cro skill
-
-"Write homepage copy for my SaaS"
-→ Uses copywriting skill
-
-"Set up GA4 tracking for signups"
-→ Uses analytics skill
-
-"Create a 5-email welcome sequence"
-→ Uses emails skill
+"제품 마케팅 컨텍스트를 만들어줘"
+→ product-marketing skill (한국 시장·규제·톤 섹션 포함)
 ```
 
-You can also invoke skills directly:
+이후 작업을 요청하면 적절한 skill이 한국 맥락으로 동작합니다.
 
 ```
-/cro
-/emails
-/seo-audit
+"네이버 블로그 상위노출용 글을 써줘"      → naver-blog-seo
+"카카오 알림톡 템플릿 만들어줘"            → kakao-biz-message
+"스마트스토어 상품명 최적화해줘"           → naver-smartstore-seo
+"이 광고 카피 법적으로 문제 없는지 봐줘"   → kr-ad-compliance
+"랜딩페이지 전환율 개선해줘"               → cro (한국 신뢰 요소 반영)
+"가격 페이지 만들어줘"                     → pricing (원화·부가세·간편결제)
 ```
 
-## Skill Categories
+직접 호출도 가능합니다.
 
-### Conversion Optimization
-- `cro` - Pages and forms
-- `signup` - Registration flows
-- `onboarding` - Post-signup activation
-- `popups` - Modals and overlays
-- `paywalls` - In-app upgrade moments
+```
+/naver-blog-seo
+/kakao-biz-message
+/kr-ad-compliance
+```
 
-### Content & Copy
-- `copywriting` - Marketing page copy
-- `copy-editing` - Edit and polish existing copy
-- `cold-email` - B2B cold outreach emails and sequences
-- `emails` - Automated email flows
-- `social` - Social media content
-- `image` - AI image generation, design tools, and optimization
+## Skills란?
 
-### SEO & Discovery
-- `seo-audit` - Technical and on-page SEO
-- `ai-seo` - AI search optimization (AEO, GEO, LLMO)
-- `programmatic-seo` - Scaled page generation
-- `site-architecture` - Page hierarchy, navigation, URL structure
-- `competitors` - Comparison and alternative pages
-- `schema` - Structured data
+Skills는 AI 에이전트에 특정 작업을 위한 전문 지식·워크플로를 부여하는 마크다운 파일입니다. 프로젝트에 추가하면 에이전트가 마케팅 작업을 인식하고 적절한 프레임워크·모범 사례를 적용합니다. 각 skill의 **연관 skill** 섹션에서 의존 관계를 확인할 수 있습니다.
 
-### Paid & Distribution
-- `ads` - Google, Meta, LinkedIn ad campaigns
-- `ad-creative` - Bulk ad creative generation and iteration
-- `social` - Social media scheduling and strategy
+## 기여
 
-### Measurement & Testing
-- `analytics` - Event tracking setup
-- `ab-testing` - Experiment design
+skill 개선이나 신규 제안은 PR·이슈로 환영합니다. [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요.
 
-### Retention
-- `churn-prevention` - Cancel flows, save offers, dunning, payment recovery
+## 라이선스
 
-### Growth Engineering
-- `co-marketing` - Partner identification and joint campaigns
-- `free-tools` - Marketing tools and calculators
-- `referrals` - Referral and affiliate programs
-
-### Strategy & Monetization
-- `marketing-ideas` - 140 SaaS marketing ideas
-- `marketing-psychology` - Mental models and psychology
-- `launch` - Product launches and announcements
-- `pricing` - Pricing, packaging, and monetization
-
-### Sales & RevOps
-- `revops` - Lead lifecycle, scoring, routing, pipeline management
-- `sales-enablement` - Sales decks, one-pagers, objection docs, demo scripts
-
-## Contributing
-
-Found a way to improve a skill? Have a new skill to suggest? PRs and issues welcome!
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on adding or improving skills.
-
-## License
-
-[MIT](LICENSE) - Use these however you want.
+[MIT](LICENSE) — 원저작자 [Corey Haines](https://corey.co). 본 fork의 한국화 보정분도 동일하게 MIT로 제공합니다.

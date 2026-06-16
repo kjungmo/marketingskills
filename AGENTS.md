@@ -6,9 +6,10 @@ Guidelines for AI agents working in this repository.
 
 This repository contains **Agent Skills** for AI agents following the [Agent Skills specification](https://agentskills.io/specification.md). Skills install to `.agents/skills/` (the cross-agent standard). This repo also serves as a **Claude Code plugin marketplace** via `.claude-plugin/marketplace.json`.
 
-- **Name**: Marketing Skills
-- **GitHub**: [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)
-- **Creator**: Corey Haines
+- **Name**: 한국 마케팅 Skills (Marketing Skills KR)
+- **GitHub**: [kjungmo/marketingskills](https://github.com/kjungmo/marketingskills)
+- **Based on**: [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) — 한국 시장용 fork
+- **Creator**: Corey Haines (원저작자) · 한국화 fork: Marketing Skills KR
 - **License**: MIT
 
 ## Repository Structure
@@ -132,8 +133,8 @@ description: When the user wants to optimize conversions on any marketing page. 
 This repo also serves as a plugin marketplace. The manifest at `.claude-plugin/marketplace.json` lists all skills for installation via:
 
 ```bash
-/plugin marketplace add coreyhaines31/marketingskills
-/plugin install marketing-skills
+/plugin marketplace add kjungmo/marketingskills
+/plugin install marketing-skills-kr
 ```
 
 See [Claude Code plugins documentation](https://code.claude.com/docs/en/plugins.md) for details.
@@ -198,7 +199,7 @@ For tools without native MCP servers (HubSpot, Salesforce, Meta Ads, LinkedIn Ad
 When using any skill from this repository:
 
 1. **Once per session**, on first skill use, check for updates:
-   - Fetch `VERSIONS.md` from GitHub: https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/VERSIONS.md
+   - Fetch `VERSIONS.md` from GitHub: https://raw.githubusercontent.com/kjungmo/marketingskills/main/VERSIONS.md
    - Compare versions against local skill files
 
 2. **Only prompt if meaningful**:

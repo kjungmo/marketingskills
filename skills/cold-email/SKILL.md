@@ -157,3 +157,10 @@ Use this data to inform your writing — not as a checklist to satisfy.
 - **social**: For LinkedIn and social posts
 - **product-marketing**: For establishing foundational positioning
 - **revops**: For lead scoring, routing, and pipeline management
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+- 국내 B2B 콜드 이메일은 격식 있는 어조(합쇼체)와 명확한 소속·목적 밝히기를 선호합니다. 영문 콜드메일 직역투를 지양합니다.
+- **정보통신망법(현재 기준 확인 필요)**: 영리 목적 광고성 정보에 해당하면 사전 동의·(광고)표기·수신거부가 적용될 수 있습니다. 순수 1:1 업무 제안과 대량 광고성 발송의 경계를 주의하고, 의심되면 `kr-ad-compliance` 로 점검합니다.

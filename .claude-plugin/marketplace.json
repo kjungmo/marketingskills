@@ -1,18 +1,18 @@
 {
-  "name": "marketingskills",
+  "name": "marketingskills-kr",
   "owner": {
-    "name": "Corey Haines",
-    "url": "https://corey.co"
+    "name": "Marketing Skills KR",
+    "url": "https://github.com/kjungmo/marketingskills"
   },
   "metadata": {
-    "description": "Marketing skills for AI agents — conversion optimization, copywriting, SEO, paid ads, and growth",
-    "version": "2.4.2",
-    "repository": "https://github.com/coreyhaines31/marketingskills"
+    "description": "한국 시장용 마케팅 Agent Skills — 네이버·카카오·쿠팡·당근 채널 대응, 국내 규제(표시광고법·정보통신망법·개인정보보호법) 준수, CRO·카피·SEO·광고. coreyhaines31/marketingskills(MIT) 기반 fork.",
+    "version": "1.0.0",
+    "repository": "https://github.com/kjungmo/marketingskills"
   },
   "plugins": [
     {
-      "name": "marketing-skills",
-      "description": "44 marketing skills for technical marketers and founders: CRO, copywriting, cold email, prospecting, SEO, AI SEO, paid ads, SMS, ad creative, video production, image generation, co-marketing, churn prevention, pricing, referrals, revenue operations, sales enablement, customer research, site architecture, comprehensive AARRR-structured marketing plans, public relations and earned media, and more",
+      "name": "marketing-skills-kr",
+      "description": "한국 시장 마케팅 skill 51종: 네이버 블로그·스마트스토어 SEO, 카카오 알림톡/친구톡, 쿠팡 리스팅, 한국 퍼포먼스 광고, 광고 규제 점검(표시광고법·정보통신망법), 당근 로컬 광고 + CRO·카피라이팅·이메일·가격·SEO 등 글로벌 skill의 한국 보정판. 모든 skill은 product-marketing.md 컨텍스트(한국 시장·규제·톤)를 먼저 읽어 자동으로 한국 맥락을 따름.",
       "source": "./"
     }
   ]

@@ -495,3 +495,4 @@ Same format as above
 - **schema**: For implementing structured data
 - **cro**: For optimizing pages for conversion (not just ranking)
 - **analytics**: For measuring SEO performance
+- **한국 시장 보정(Korea)**: 한국 타깃이면 구글에 더해 **네이버** 노출도 점검합니다(추정 기반, 정기 검증 필요). 네이버 이원 점검 항목(노출 영역·서치어드바이저·schema.org 의존도 차이 등)은 `references/naver-seo.md` 참조. 콘텐츠는 `naver-blog-seo`, 상품은 `naver-smartstore-seo`.

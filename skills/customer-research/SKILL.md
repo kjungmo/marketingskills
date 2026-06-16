@@ -270,3 +270,13 @@ Don't ask all five at once — lead with #1 and #2, then follow up as needed.
 | Translating customer research into an ICP for outbound | `prospecting` |
 | Planning content based on discovered topics | `content-strategy` |
 | Rolling research into a comprehensive marketing plan | `marketing-plan` |
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+국내 VOC·리서치 소스를 추가합니다:
+
+- **네이버 카페·지식iN·블로그 후기**, 디시인사이드·클리앙 등 분야 커뮤니티, 블라인드(직장인), 앱스토어/네이버 쇼핑/쿠팡 리뷰.
+- 영어권 소스(Reddit·G2)보다 위 채널에서 한국 사용자의 실제 표현(고객 언어)을 수집합니다.
+- 수집·인용 시 개인정보·저작권에 유의합니다(PIPA).

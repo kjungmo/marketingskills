@@ -1,12 +1,12 @@
 {
-  "name": "marketing-skills",
-  "description": "Marketing skills for AI agents — conversion optimization, copywriting, SEO, paid ads, ad creative, and growth",
-  "version": "2.4.2",
+  "name": "marketing-skills-kr",
+  "description": "한국 시장용 마케팅 Agent Skills (네이버·카카오·쿠팡·당근 채널 + 국내 규제 준수). coreyhaines31/marketingskills(MIT) 기반 fork.",
+  "version": "1.0.0",
   "author": {
-    "name": "Corey Haines"
+    "name": "Marketing Skills KR"
   },
-  "homepage": "https://github.com/coreyhaines31/marketingskills",
-  "repository": "https://github.com/coreyhaines31/marketingskills",
+  "homepage": "https://github.com/kjungmo/marketingskills",
+  "repository": "https://github.com/kjungmo/marketingskills",
   "license": "MIT",
   "skills": "./skills"
 }

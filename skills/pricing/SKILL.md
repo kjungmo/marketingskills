@@ -229,3 +229,14 @@ Identifies which features customers value most:
 - **ab-testing**: For testing pricing changes
 - **revops**: For deal desk processes and pipeline pricing
 - **sales-enablement**: For proposal templates and pricing presentations
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+한국 타깃이면 가격 표기·결제를 현지화합니다:
+
+- **통화·세금**: 원화(₩/원) 표기. **부가세(VAT 10%)** 포함/별도를 명확히 합니다(B2C는 통상 부가세 포함 표기가 관행).
+- **결제 수단**: 네이버페이·카카오페이·토스 등 간편결제와 신용카드 무이자 할부를 고려합니다. 정기결제(구독)는 자동결제 동의·해지 방법을 고지합니다.
+- **표기 규제(전자상거래법)**: 할인 전/후 가격, 추가비용(배송비 등)을 명확히 고지합니다. "최저가" 등은 실증 전제 → `kr-ad-compliance`.
+- 가격 심리는 `marketing-psychology`, 인앱 업그레이드는 `paywalls` 참고.

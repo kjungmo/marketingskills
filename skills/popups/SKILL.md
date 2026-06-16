@@ -452,3 +452,11 @@ Ideas to A/B test with expected outcomes
 - **cro**: For the page context around popups
 - **emails**: For what happens after popup conversion
 - **ab-testing**: For testing popup variations
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+- 이메일·전화번호 수집 팝업은 **개인정보 수집·이용 동의**(목적·항목·보유기간)와 **마케팅 수신 동의(옵트인)** 체크박스를 분리·명시해야 합니다(PIPA·정보통신망법, 현재 기준 확인 필요).
+- 동의는 기본 체크(사전 선택)를 금지하고 사용자가 직접 선택하게 합니다.
+- 혜택·문구의 과장 표현은 `kr-ad-compliance` 점검.

@@ -360,3 +360,11 @@ node tools/clis/google-ads.js reports get --type ad_performance --date-range las
 - **ab-testing**: For structuring creative tests with statistical rigor
 - **marketing-psychology**: For psychological principles behind high-performing creative
 - **copy-editing**: For polishing ad copy before launch
+
+## 한국 시장 보정 (Korea)
+
+> 한국 타깃 제품에만 적용합니다. 규제 항목은 현재 기준 확인이 필요하며 법령은 개정될 수 있습니다.
+
+- 한국어 광고 카피는 직역투를 피하고 국내 관용 표현·후킹을 사용합니다(톤은 product-marketing.md).
+- 매체별 소재 규격은 네이버 GFA·카카오모먼트·메타의 한국 가이드를 따릅니다(규격은 수시 변동 → 집행 전 확인).
+- 과장·절대적·미입증 표현은 `kr-ad-compliance` 로 점검합니다. 국내 채널 운영은 `kr-performance-ads`.
