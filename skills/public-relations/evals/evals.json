@@ -1,0 +1,60 @@
+{
+  "skill_name": "public-relations",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "There's a huge story breaking today about AI agents replacing junior developers. We make a code-review tool. How do we get our take in front of journalists fast?",
+      "expected_output": "Should check for product-marketing.md first. Should identify this as reactive newsjacking and emphasize speed over polish (a B+ pitch in the first hours beats an A+ pitch on day three). Should reference the newsjacking workflow (detect -> score newsworthiness -> craft angle -> pitch) and warn that the story must be the trend/data/conflict, not the product. Should propose a specific POV/angle tied to the company's evidence and a short, journalist-respecting pitch.",
+      "assertions": [
+        "Checks for product-marketing.md",
+        "Identifies as reactive newsjacking",
+        "Emphasizes speed over polish",
+        "References newsjacking workflow or scoring",
+        "Frames story around the trend, not the product",
+        "Proposes a specific angle and concise pitch"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We just hit 10,000 customers and have proprietary data on how teams actually use AI at work. I want coverage in tech press. Help me pitch this.",
+      "expected_output": "Should treat this as proactive pitching. Should help shape the proprietary data into a story (the data/trend is the story; the product is the evidence). Should recommend building a targeted media list and scoring journalist fit, and reference the journalist-pitching workflow with subject-line craft and follow-up cadence. Should push for founder/exec quotes and a clear destination (press page/blog) that converts attention. Should distinguish this from directory submissions and launch.",
+      "assertions": [
+        "Identifies as proactive pitching",
+        "Shapes proprietary data into a story angle",
+        "Recommends building/scoring a media list",
+        "References journalist-pitching workflow",
+        "Pushes for founder/exec quotes",
+        "Recommends a destination (press page/blog)"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "How do I use HARO / Connectively and Qwoted to get press mentions without spending hours every day?",
+      "expected_output": "Should identify this as the inbound press-request mode and reference the press-platforms workflow. Should describe a daily triage loop (scan queries, filter for fit, respond fast with a tight template), set expectations on ROI, and emphasize relevance and credibility over volume. Should note these are journalist-driven and keep scope distinct from directories.",
+      "assertions": [
+        "Identifies as inbound press-request mode",
+        "References press-platforms workflow",
+        "Describes a daily triage/response loop",
+        "Provides or references a response template",
+        "Sets realistic ROI expectations"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "우리는 한국 스타트업인데 언론 보도를 받고 싶어요. 보도자료랑 프레스 페이지부터 어떻게 준비하죠?",
+      "expected_output": "Should check product-marketing.md and cover the owned-media foundation (press page + media kit) so journalists can find and quote you. Should apply the Korea adaptation: domestic distribution and outlets (뉴스와이어 보도자료 배포, 플래텀·아웃스탠딩·전자신문 등 스타트업·테크 매체), Korean press-release structure (제목·부제·리드·본문·문의처) and formal tone, and note that English-only services like HARO are limited domestically. Should keep claims evidence-based and suggest kr-ad-compliance for any exaggerated wording.",
+      "assertions": [
+        "Checks for product-marketing.md",
+        "Covers owned media (press page + media kit)",
+        "Applies Korea adaptation (domestic outlets/distribution)",
+        "References Korean press-release format and formal tone",
+        "Notes HARO/English services are limited in Korea",
+        "Flags evidence-based claims / kr-ad-compliance"
+      ],
+      "files": []
+    }
+  ]
+}

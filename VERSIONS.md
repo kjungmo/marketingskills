@@ -18,17 +18,24 @@ Current versions of all skills. Agents can compare against local versions to che
 | content-strategy | 2.0.0 | 2026-05-05 |
 | copy-editing | 2.0.0 | 2026-05-05 |
 | copywriting | 2.0.0 | 2026-05-05 |
+| coupang-listing | 1.0.0 | 2026-06-16 |
 | cro | 2.0.0 | 2026-05-05 |
 | customer-research | 2.0.0 | 2026-05-05 |
+| danggn-local-ads | 1.0.0 | 2026-06-16 |
 | directory-submissions | 2.0.0 | 2026-05-05 |
 | emails | 2.0.0 | 2026-05-05 |
 | free-tools | 2.0.0 | 2026-05-05 |
 | image | 2.0.1 | 2026-05-18 |
+| kakao-biz-message | 1.0.0 | 2026-06-16 |
+| kr-ad-compliance | 1.0.0 | 2026-06-16 |
+| kr-performance-ads | 1.0.0 | 2026-06-16 |
 | launch | 2.0.0 | 2026-05-05 |
 | lead-magnets | 2.0.0 | 2026-05-05 |
 | marketing-ideas | 2.0.0 | 2026-05-05 |
 | marketing-plan | 1.1.0 | 2026-05-29 |
 | marketing-psychology | 2.0.0 | 2026-05-05 |
+| naver-blog-seo | 1.0.0 | 2026-06-16 |
+| naver-smartstore-seo | 1.0.0 | 2026-06-16 |
 | onboarding | 2.0.0 | 2026-05-05 |
 | ads | 2.0.1 | 2026-05-26 |
 | paywalls | 2.0.0 | 2026-05-05 |
@@ -50,6 +57,17 @@ Current versions of all skills. Agents can compare against local versions to che
 | video | 2.0.1 | 2026-05-18 |
 
 ## Recent Changes
+
+### kr-1.0.0 (2026-06-16) — 한국 시장 현지화 fork
+
+coreyhaines31/marketingskills(MIT)를 한국 시장용으로 재구성. 모든 skill이 먼저 읽는 `product-marketing.md`에 한국 시장 컨텍스트·국내 규제(표시광고법·정보통신망법·개인정보보호법)·톤 가이드를 주입해 다수 글로벌 skill이 자동으로 한국 맥락을 따르도록 함.
+
+- **신규 skill 7종**: `naver-blog-seo`·`naver-smartstore-seo`·`kakao-biz-message`(P0), `coupang-listing`·`kr-performance-ads`·`kr-ad-compliance`(P1), `danggn-local-ads`(P2). 각 skill에 `evals/evals.json` 포함. `kr-ad-compliance`는 다른 skill이 발행 전 호출하는 공통 규제 체커.
+- **product-marketing**: 문서 템플릿에 `시장 컨텍스트`·`규제 가드레일`·`톤 & 카피 가이드` 섹션 주입(컨텍스트 허브).
+- **ADAPT 22종**: seo-audit, copywriting, emails, pricing, ads, ad-creative, copy-editing, sms, cold-email, cro, social, analytics, aso, community-marketing, customer-research, directory-submissions, launch, popups, programmatic-seo, prospecting, public-relations, signup에 `## 한국 시장 보정 (Korea)` 섹션 추가(원본 유지). seo-audit는 상세를 `references/naver-seo.md`로 분리.
+- **배포**: `.claude-plugin/marketplace.json`(marketing-skills-kr)·`README.md` 한국어화. 분류 근거는 `LOCALIZATION_PLAN.md`.
+- 규제·검색 로직 단정 표현은 "추정/현재 기준 확인 필요" 주석 유지. 법령은 개정될 수 있으므로 집행 전 재검증 필요.
+- 총 skill: 51.
 
 ### 2.4.2 (2026-06-15)
 
