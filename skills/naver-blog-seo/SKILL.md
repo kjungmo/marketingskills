@@ -60,6 +60,11 @@ metadata:
 - **메타 설명(요약문)**
 - **규제 표시 문구** (협찬·체험단인 경우)
 
+## 참고 자료
+
+- 키워드 리서치·검색의도 분류·군집 설계: `references/keyword-research.md`
+- C-Rank·D.I.A.+ 정렬 가이드(추정 기반)·저품질 신호: `references/ranking-signals.md`
+
 ## 연관 skill
 
 copywriting · content-strategy · kr-ad-compliance · naver-smartstore-seo · seo-audit

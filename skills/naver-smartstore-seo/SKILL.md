@@ -52,6 +52,10 @@ metadata:
 - **리뷰 유도 전략**
 - **규제 표기 체크리스트**
 
+## 참고 자료
+
+- 상품명 공식·카테고리·태그·금지표현·상세페이지 템플릿: `references/listing-optimization.md`
+
 ## 연관 skill
 
 copywriting · cro · kr-ad-compliance · coupang-listing · naver-blog-seo

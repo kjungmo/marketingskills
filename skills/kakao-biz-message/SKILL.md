@@ -66,6 +66,11 @@ metadata:
 - **채널 친구 확보 플랜**
 - **발송 타이밍·세그먼트 권고**
 
+## 참고 자료
+
+- 알림톡/친구톡 템플릿 갤러리(변수·버튼 포함): `references/templates.md`
+- 정보통신망법 체크리스트·(광고)/수신거부/옵트인 문구: `references/compliance-templates.md`
+
 ## 연관 skill
 
 emails · sms · kr-ad-compliance · copywriting · churn-prevention
